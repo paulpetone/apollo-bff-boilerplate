@@ -7,8 +7,7 @@
   "scripts": {
     "compile": "tsc",
     "generateSchema": "node --experimental-specifier-resolution=node ./dist/schemas.js",
-    "codegen": "graphql-codegen --config codegen.yml",
-    "start": "npm run compile && npm run generateSchema && npm run codegen && node --experimental-specifier-resolution=node ./dist/index.js"
+    "start": "npm run compile && npm run generateSchema && node --experimental-specifier-resolution=node ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +25,6 @@
     "graphql": "^16.6.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "2.16.2",
-    "@graphql-codegen/typescript": "2.8.6",
-    "@graphql-codegen/typescript-resolvers": "2.7.11",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
