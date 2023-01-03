@@ -1,0 +1,67 @@
+{
+  "name": "apollo-bff-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "generateSchema": "node --experimental-specifier-resolution=node ./dist/schemas.js",
+    "codegen": "graphql-codegen --config codegen.yml",
+    "start": "npm run compile && npm run generateSchema && npm run codegen && node --experimental-specifier-resolution=node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulpetone/apollo-bff-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "paulpetone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulpetone/apollo-bff-boilerplate/issues"
+  },
+  "homepage": "https://github.com/paulpetone/apollo-bff-boilerplate#readme",
+  "dependencies": {
+    "@apollo/server": "^4.3.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.16.2",
+    "@graphql-codegen/typescript": "2.8.6",
+    "@graphql-codegen/typescript-resolvers": "2.7.11",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "typescript": "^4.9.4",
+    "@graphql-codegen/introspection": "2.2.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "@typescript-eslint/member-delimiter-style": 0,
+      "@typescript-eslint/camelcase": 0,
+      "react-hooks/exhaustive-deps": 0,
+      "@typescript-eslint/interface-name-prefix": 0,
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ],
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/no-explicit-any": [
+        "error"
+      ]
+    }
+  }
+}

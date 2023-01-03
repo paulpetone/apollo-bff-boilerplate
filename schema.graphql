@@ -1,0 +1,20 @@
+
+  
+type Book {
+  title: String
+  author: String
+}
+
+type Query {
+  getBooks: [Book]
+}
+
+  
+type MutationResponse {
+  msg: String
+}
+
+type Mutation {
+  setBooks: MutationResponse
+}
+
