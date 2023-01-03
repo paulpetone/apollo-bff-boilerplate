@@ -105,3 +105,4 @@ dist
 
 # Apollo
 __generated__
+schema.graphql
